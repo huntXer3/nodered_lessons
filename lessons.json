@@ -1,0 +1,933 @@
+[
+    {
+        "id": "1004e76effc786fe",
+        "type": "tab",
+        "label": "1. layout ",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "616fdb2c661cc475",
+        "type": "tab",
+        "label": "2. NodeRed Messages",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "aaaca58cb7f0a17c",
+        "type": "tab",
+        "label": "3.Inject and Debug",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "273328bd37e44b5d",
+        "type": "tab",
+        "label": "4. change / switch node",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f37c14f432d1f0e7",
+        "type": "tab",
+        "label": "5. creating subflow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9ce5650a7a5b83cd",
+        "type": "tab",
+        "label": "6. Persistent Data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1b136da4a105ee57",
+        "type": "subflow",
+        "name": "writing to a file",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 535,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "21f84c91984fe074"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 940,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "21f84c91984fe074",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "1aebde45bd9f337a",
+        "type": "junction",
+        "z": "aaaca58cb7f0a17c",
+        "x": 460,
+        "y": 255,
+        "wires": [
+            [
+                "a56a1c31521082c8"
+            ]
+        ]
+    },
+    {
+        "id": "21f84c91984fe074",
+        "type": "file",
+        "z": "1b136da4a105ee57",
+        "name": "writing to a test.txt in c",
+        "filename": "C:\\Users\\LJason\\Documents\\test.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 730,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23351db348d91f15",
+        "type": "comment",
+        "z": "1004e76effc786fe",
+        "name": "Workspace here",
+        "info": "Main area of work",
+        "x": 520,
+        "y": 450,
+        "wires": []
+    },
+    {
+        "id": "e20aa0f84f702803",
+        "type": "comment",
+        "z": "1004e76effc786fe",
+        "name": "information, debug, help, context sidebar >>>",
+        "info": " 1. Information - lower case i. \n It shows information written in a comment node.\n 2. debug - a small bug icon. \n It shows output from debug node and various information. Eg error msg\n 3. help - a textbook icon\n It shows useful information about selected nodes\n 4. Context - 3 disc stack togather icon. \n It displays the value saved in flow, global upon refreshed. \n Persistant date   ",
+        "x": 905,
+        "y": 210,
+        "wires": []
+    },
+    {
+        "id": "157f27d53c1340ff",
+        "type": "comment",
+        "z": "1004e76effc786fe",
+        "name": "<<< palette",
+        "info": "This is where all the nodes lives.",
+        "x": 75,
+        "y": 225,
+        "wires": []
+    },
+    {
+        "id": "50e818c2778eddbf",
+        "type": "comment",
+        "z": "1004e76effc786fe",
+        "name": "header where all the tabs are ^",
+        "info": "The top is where you can find all the tabs",
+        "x": 545,
+        "y": 30,
+        "wires": []
+    },
+    {
+        "id": "4ceb96b654a5e185",
+        "type": "inject",
+        "z": "616fdb2c661cc475",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "hello world",
+        "payloadType": "str",
+        "x": 105,
+        "y": 195,
+        "wires": [
+            [
+                "2c2da74fbb57937f"
+            ]
+        ]
+    },
+    {
+        "id": "2c2da74fbb57937f",
+        "type": "delay",
+        "z": "616fdb2c661cc475",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 300,
+        "y": 195,
+        "wires": [
+            [
+                "6eaf173d17cb76ed"
+            ]
+        ]
+    },
+    {
+        "id": "6eaf173d17cb76ed",
+        "type": "delay",
+        "z": "616fdb2c661cc475",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 480,
+        "y": 195,
+        "wires": [
+            [
+                "f3f3438f83d8e77b"
+            ]
+        ]
+    },
+    {
+        "id": "f3f3438f83d8e77b",
+        "type": "delay",
+        "z": "616fdb2c661cc475",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 675,
+        "y": 195,
+        "wires": [
+            [
+                "f552bcc7b4faf0a4"
+            ]
+        ]
+    },
+    {
+        "id": "f552bcc7b4faf0a4",
+        "type": "debug",
+        "z": "616fdb2c661cc475",
+        "name": "2. output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 195,
+        "wires": []
+    },
+    {
+        "id": "472bb56a749fa04b",
+        "type": "comment",
+        "z": "616fdb2c661cc475",
+        "name": "2. Info about message object used in NodeRED",
+        "info": "A JavaScript object is a data structure used to store multiple values in a single variable. \nIt consists of **key-value pairs**, where each key (or property) is associated with a specific value. \n\n{\n    \n    name: \"Bob\",\n    age: 24,\n    married: true   \n}\n\n**name**, **age**, and **married** are properties of the object. \n\nNode-RED messages use this structure to organize \nand transport data within your flows.\n\nExample of msg object used in nodeRED\n{\n    \n    \"_msgid\":\"d71b6dac5e8ca8c1\"\n    \"payload\":\"hello world\",\n    \"topic\":\"\"\n    \n}",
+        "x": 240,
+        "y": 585,
+        "wires": []
+    },
+    {
+        "id": "3409be382811b5fb",
+        "type": "comment",
+        "z": "616fdb2c661cc475",
+        "name": "1. Overview of how does NodeRed work",
+        "info": "In Node-RED, messages are packets of data that travel\nbetween nodes in your flow. \n\nNode-RED is event-driven, meaning an event emitter triggers events, \nand a listener reacts to them. \n\nIn this context, nodes in Node-RED act as both event emitters and listeners, \nwith messages serving as the medium through \nwhich these events are communicated. \n\nThese messages represent the information that nodes read, modify, \nand act upon. \n\nEach node processes these messages and passes them along to the next node \nin the sequence.\n\n",
+        "x": 210,
+        "y": 525,
+        "wires": []
+    },
+    {
+        "id": "54d894dacd360397",
+        "type": "comment",
+        "z": "616fdb2c661cc475",
+        "name": "3. About NodeRed Message ",
+        "info": "In Node-RED, messages are by default referred to as msg.\n\nNode-RED messages consist of several key properties needed for data handling and communication \nbetween nodes.\n\n - msg._msgid: A unique identifier for the message, automatically assigned by Node-RED. \n It helps in tracking and debugging messages within the flow.\n\n - msg.payload: This is the **primary data** of the message. \nIt contains the main information that nodes process and act upon.\n\n - msg.topic: An optional property used to categorize or identify the message. \n It can be useful for routing or filtering messages based on their context.\n\nnotes:\n1. Additional properties can be defined when needed. \n2. _msgid is always present. It is a unique identifier.\n",
+        "x": 180,
+        "y": 645,
+        "wires": []
+    },
+    {
+        "id": "b174363b006b6113",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "string",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello world",
+        "payloadType": "str",
+        "x": 195,
+        "y": 75,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "a56a1c31521082c8",
+        "type": "debug",
+        "z": "aaaca58cb7f0a17c",
+        "name": "3. output flow 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 195,
+        "wires": []
+    },
+    {
+        "id": "dcb1321fe4f5e10a",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "number",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-123456789.012321",
+        "payloadType": "num",
+        "x": 195,
+        "y": 135,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "62371f9356160007",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "boolean",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 195,
+        "y": 195,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "7d684c7f24b9d7a4",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "JS Object",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"firstName\":\"Jason\",\"LastName\":\"Lim\"}",
+        "payloadType": "json",
+        "x": 205,
+        "y": 255,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "114b5ca0852def5f",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "buffer",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[72,101,108,108,111,32,119,111,114,108,100]",
+        "payloadType": "bin",
+        "x": 190,
+        "y": 375,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "5489f73695b7fc12",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "JSONata",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "\"Hello\" & \" \" & \"World\" & \"\\n\"",
+        "payloadType": "jsonata",
+        "x": 205,
+        "y": 435,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "204a0486c653b9ed",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "JS date Object",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "object",
+        "payloadType": "date",
+        "x": 225,
+        "y": 495,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "9888f1a65d1de3bc",
+        "type": "inject",
+        "z": "aaaca58cb7f0a17c",
+        "name": "Array",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"Jason\",\"Tim\",\"Peter\"]",
+        "payloadType": "json",
+        "x": 195,
+        "y": 315,
+        "wires": [
+            [
+                "1aebde45bd9f337a"
+            ]
+        ]
+    },
+    {
+        "id": "8aa043ff46996953",
+        "type": "link out",
+        "z": "aaaca58cb7f0a17c",
+        "name": "out to 4",
+        "mode": "link",
+        "links": [
+            "609f808876f25836"
+        ],
+        "x": 660,
+        "y": 285,
+        "wires": []
+    },
+    {
+        "id": "eb1b4ebab67de5a2",
+        "type": "comment",
+        "z": "aaaca58cb7f0a17c",
+        "name": "data types available",
+        "info": " - string\n - number - can be positive or negative \n - boolean - true/false\n - JS Object - {name:value pair}\n - array - [element1,element2]\n - buffer - binary data \n - JS date Object - built-in date object with properties and methods\n\nNote: \n 1. JS {} can be used to create array, JSON string and JSON \n 2. Date object has 3 sub types\n 3. \n",
+        "x": 210,
+        "y": 585,
+        "wires": []
+    },
+    {
+        "id": "e53450c10b953318",
+        "type": "link out",
+        "z": "aaaca58cb7f0a17c",
+        "name": "out to 6.",
+        "mode": "link",
+        "links": [
+            "4d417a8587471fcd"
+        ],
+        "x": 660,
+        "y": 345,
+        "wires": []
+    },
+    {
+        "id": "609f808876f25836",
+        "type": "link in",
+        "z": "273328bd37e44b5d",
+        "name": "link in 1",
+        "links": [
+            "8aa043ff46996953"
+        ],
+        "x": 270,
+        "y": 195,
+        "wires": [
+            [
+                "fc49a2aa2e8f281f",
+                "50711e72bd37d61e"
+            ]
+        ]
+    },
+    {
+        "id": "6b3641a6ecedde28",
+        "type": "debug",
+        "z": "273328bd37e44b5d",
+        "name": "4. output flow 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 995,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fc49a2aa2e8f281f",
+        "type": "change",
+        "z": "273328bd37e44b5d",
+        "name": "change msg.payload to string:projector",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "projector",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 605,
+        "y": 180,
+        "wires": [
+            [
+                "6b3641a6ecedde28"
+            ]
+        ]
+    },
+    {
+        "id": "50711e72bd37d61e",
+        "type": "switch",
+        "z": "273328bd37e44b5d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "istype",
+                "v": "string",
+                "vt": "string"
+            },
+            {
+                "t": "istype",
+                "v": "boolean",
+                "vt": "boolean"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 515,
+        "y": 300,
+        "wires": [
+            [
+                "0711e729b9115f28"
+            ],
+            [
+                "72f36b772bdbc980"
+            ],
+            [
+                "abfc8ce5466b5068"
+            ]
+        ]
+    },
+    {
+        "id": "0711e729b9115f28",
+        "type": "debug",
+        "z": "273328bd37e44b5d",
+        "name": "4. string",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 795,
+        "y": 255,
+        "wires": []
+    },
+    {
+        "id": "72f36b772bdbc980",
+        "type": "debug",
+        "z": "273328bd37e44b5d",
+        "name": "4. number",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 795,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "abfc8ce5466b5068",
+        "type": "debug",
+        "z": "273328bd37e44b5d",
+        "name": "4. other",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 795,
+        "y": 345,
+        "wires": []
+    },
+    {
+        "id": "cfaa5a2269e390a8",
+        "type": "subflow:1b136da4a105ee57",
+        "z": "f37c14f432d1f0e7",
+        "name": "writing to a file",
+        "x": 575,
+        "y": 300,
+        "wires": [
+            [
+                "0c16dbc440b5e549"
+            ]
+        ]
+    },
+    {
+        "id": "4d417a8587471fcd",
+        "type": "link in",
+        "z": "f37c14f432d1f0e7",
+        "name": "link to 4.subflow",
+        "links": [
+            "fb1af3b48d42b3c4",
+            "e53450c10b953318"
+        ],
+        "x": 315,
+        "y": 300,
+        "wires": [
+            [
+                "cfaa5a2269e390a8"
+            ]
+        ]
+    },
+    {
+        "id": "0c16dbc440b5e549",
+        "type": "debug",
+        "z": "f37c14f432d1f0e7",
+        "name": "5. output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 795,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "f6b56c49b2247b5f",
+        "type": "file in",
+        "z": "f37c14f432d1f0e7",
+        "name": "",
+        "filename": "C:\\Users\\LJason\\Documents\\test.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 575,
+        "y": 465,
+        "wires": [
+            [
+                "dada05fff89f0295"
+            ]
+        ]
+    },
+    {
+        "id": "f10fb7dfd268422a",
+        "type": "inject",
+        "z": "f37c14f432d1f0e7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 290,
+        "y": 465,
+        "wires": [
+            [
+                "f6b56c49b2247b5f"
+            ]
+        ]
+    },
+    {
+        "id": "dada05fff89f0295",
+        "type": "debug",
+        "z": "f37c14f432d1f0e7",
+        "name": "5. output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 465,
+        "wires": []
+    },
+    {
+        "id": "8c5a8930dec060e3",
+        "type": "link in",
+        "z": "9ce5650a7a5b83cd",
+        "name": "link in 2",
+        "links": [],
+        "x": 450,
+        "y": 930,
+        "wires": [
+            [
+                "6cb9209ba859cf19",
+                "cd7a36f144cbcac0"
+            ]
+        ]
+    },
+    {
+        "id": "6cb9209ba859cf19",
+        "type": "change",
+        "z": "9ce5650a7a5b83cd",
+        "name": "saving to flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "text",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 635,
+        "y": 930,
+        "wires": [
+            [
+                "b3216d277d9c77d8"
+            ]
+        ]
+    },
+    {
+        "id": "cd7a36f144cbcac0",
+        "type": "change",
+        "z": "9ce5650a7a5b83cd",
+        "name": "saving to global",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "text",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 635,
+        "y": 855,
+        "wires": [
+            [
+                "b3216d277d9c77d8"
+            ]
+        ]
+    },
+    {
+        "id": "b3216d277d9c77d8",
+        "type": "debug",
+        "z": "9ce5650a7a5b83cd",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 855,
+        "wires": []
+    }
+]
